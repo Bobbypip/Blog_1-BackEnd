@@ -91,8 +91,8 @@ class UserController extends Controller
 
         //Validar datos
         $validate = \Validator::make($params_array, [
-            'name'      => 'required|alpha',
-            'password'  => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required'
         ]);
 
         if($validate->fails()){
@@ -104,7 +104,6 @@ class UserController extends Controller
                 'errors'    => $validate->errors()
             );
         }else{
-
             //Cifrar la password
             $pwd = hash('sha256', $params->password);
 
