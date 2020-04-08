@@ -144,6 +144,7 @@ class UserController extends Controller
             //Quitar los campos que no quiero actualizar
             unset($params_array['id']);
             unset($params_array['role']);
+            unset($params_array['password']);
             unset($params_array['created_at']);
             unset($params_array['remember_token']);
 
