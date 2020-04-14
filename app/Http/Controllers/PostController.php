@@ -33,8 +33,8 @@ class PostController extends Controller
 
     //find devuelve un elemento de la tabla, una sugerencia es buscarlo por el id
     public function show($id){
-        $post = Post::find($id)->load('category');
-
+        $post = Post::find($id)->load('category')
+                               ->load('user');
         if(is_object($post)){
             $data = [
                 'code' => 200,
