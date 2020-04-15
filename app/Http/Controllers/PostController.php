@@ -114,8 +114,6 @@ class PostController extends Controller
         //Conseguir usuario identificado
         $user = $this->getIdentity($request);
 
-
-
         //Datos para devolver
         $data = array(
             'code' => 400,

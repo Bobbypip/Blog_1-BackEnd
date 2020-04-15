@@ -31,6 +31,8 @@ Route::get('/test-orm', 'PruebasController@testOrm');
 
 //API Routes
 
+    //Para ver todas la rutas en la ternimal usar el comando: php artisan route:list
+
     /*Metodos HTTP comunes:
 
     GET: Conseguir datos o recursos
@@ -57,6 +59,7 @@ Route::get('/test-orm', 'PruebasController@testOrm');
 
     //Rutas del controlador de entradas
     Route::resource('/api/post', 'PostController');
+    
     Route::post('/api/post/upload', 'PostController@upload');
     Route::get('/api/post/image/{filename}', 'PostController@getImage');
     Route::get('/api/post/category/{id}', 'PostController@getPostsByCategory');

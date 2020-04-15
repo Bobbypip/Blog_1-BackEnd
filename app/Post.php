@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $table = 'posts';
-    protected $fillable = ['title'];
+    protected $fillable = [
+        'title', 'content', 'category_id', 'image'
+    ];
 
     //Relacion de muchos a uno
     public function user(){
